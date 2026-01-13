@@ -20,12 +20,46 @@ The analysis is performed on **800k+ real consumer complaints** published by the
 - Translate NLP outputs into **actionable business insights**
 
 ---
+## 📦 Dataset Description
 
-## 📊 Dataset
-**Source:** CFPB Consumer Complaints Database  
-**Time Range:** Last 10 years  
-**Records Used:** ~800k+ complaints  
-**Key Feature:** Only complaints with narrative text (`Has narrative = true`)
+This project uses the **Consumer Financial Protection Bureau (CFPB) Consumer Complaints Dataset**, which contains real-world consumer complaints submitted against financial institutions in the United States.
+
+Due to the large file size (~1GB), the raw dataset is **not included** in this repository.
+
+### 🔗 Data Source
+The dataset can be downloaded directly from the official CFPB website:
+
+https://www.consumerfinance.gov/data-research/consumer-complaints/
+
+### 🎯 Filters Applied
+The following filters were applied before exporting the dataset:
+- **Date range:** December 1, 2011 – January 13, 2026  
+- **Has consumer complaint narrative:** `True`
+- **Sort order:** Most recent complaints first
+
+### 📊 Dataset Size
+- **Rows:** ~800k+ million complaints  
+- **Columns:** 18  
+- **Key Columns Used:**
+  - `Consumer complaint narrative`
+  - `Product`
+  - `Issue`
+  - `Company`
+  - `Date received`
+  - `State`
+  - `Company response to consumer`
+  - `Consumer disputed?`
+
+### 📁 How to Use the Data
+1. Download the dataset using the link above with the specified filters.
+2. Place the CSV file inside the `data/` directory (not tracked by Git).
+3. Run the notebooks in sequence to reproduce the analysis.
+
+```bash
+data/
+├── consumer_complaints.csv   # ignored by git
+
+---------------------------------------------------------------
 
 ### Key Columns Used
 - Consumer complaint narrative
